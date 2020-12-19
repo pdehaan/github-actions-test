@@ -1,9 +1,17 @@
-on: push
+name: Debugging contexts
+
+on:
+  - pull_request
+  - push
 
 jobs:
   one:
     runs-on: ubuntu-latest
     steps:
+      - name: PR Number
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: echo "$PR_NUMBER"
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
