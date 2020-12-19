@@ -1,3 +1,5 @@
+name: Debugging contexts
+
 on: push
 
 jobs:
