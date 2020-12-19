@@ -1,0 +1,14 @@
+name: PR Comment Demo
+
+on: 
+  push:
+    branches: master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Bleep bloop
+      run: |
+        echo "hello world"
