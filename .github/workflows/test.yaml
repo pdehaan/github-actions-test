@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Bleep bloop
-      run: |
-        echo "hello world"
+      - uses: actions/checkout@v1
+      - name: Bleep bloop
+        run: |
+          echo "hello world"
